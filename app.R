@@ -56,7 +56,7 @@ ui <- fluidPage(
              h4("It is strongly advised to consult the report to understand what is presented in this app."),
                                
              h2("Word of warning"),
-             h4("This app is not intended as an analysis platform but rather a vizualisation tool that allows the quick exploration of the results generated in Dauphin et al. (2021). "),
+             h4("This app is not intended as an analysis platform but rather a visualization tool that allows the quick exploration of the results generated in Dauphin et al. (2021). "),
              h4("The user can select a year of interest and plot two variables of their choice. on each plot, a dot correspond to one site, sub-watershed are color-coded as indicated in the legend, 
                 and the size of the dot is proportionate to the number of juvenile that had their FL measured."),
              
