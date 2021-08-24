@@ -60,11 +60,11 @@ ui <- fluidPage(
              h4("The user can select a year of interest and plot two variables of their choice. on each plot, a dot correspond to one site, sub-watershed are color-coded as indicated in the legend, 
                 and the size of the dot is proportionate to the number of juvenile that had their FL measured."),
              
-             h4("In the vizualition tab, the plots are automatically generated with a linear model fitted to the selected data. This allow a quick look at the general trend however,
+             h4("In the Visualization tab, the plots are automatically generated with a linear model fitted to the selected data. This allow a quick look at the general trend however,
                 this is likely not the most appropriate way to analyse the data and therefore this should be kept in mind while exploring the dataset"),
              
              h2("Glossary"),
-             h4("The vizualisation tab allows the user to plot different variable listed below:"),
+             h4("The visualization tab allows the user to plot different variable listed below:"),
              h4(tags$b("JULIAN_DAY"), ": Calendar day of sampling/electrofishing"),
              h4(tags$b("d_0"), ": Average density of 0+ juveniles"),
              h4(tags$b("d_1"), ": Average density of 1+ juveniles"),
@@ -86,7 +86,7 @@ ui <- fluidPage(
              ),
  
     tabPanel(
-      title = "Vizualisation",
+      title = "Visualization",
       sidebarLayout(
     
         #Inputs: Select variables to plot
