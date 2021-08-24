@@ -4,7 +4,7 @@ library(tidyverse)
 
 
 
-sum_data <- read.csv("C:/Users/DauphinGu/Desktop/_Work/Postdoc UNB/DFO data/_M_R_annual densities/2021-01-25_adding_2020_data/Output/Summary_year_d_avg_FL_R.csv")
+sum_data <- read.csv("https://raw.githubusercontent.com/guillaumed83/shiny_juveniles_restigouche/master/Summary_year_d_avg_FL_R.csv")
 
 
 list_lf <- c("0+","1+","2+")
