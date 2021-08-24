@@ -30,8 +30,6 @@ MyPalette <- c(
   
 )
 
-setwd("C:/Users/DauphinGu/Desktop/DFO projects/Geo_spatial/shiny")
-
 ui <- fluidPage(
   
   titlePanel("Summary juvenile data in the Restigouche watershed"),
