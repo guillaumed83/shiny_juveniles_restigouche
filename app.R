@@ -4,7 +4,7 @@ library(tidyverse)
 
 
 
-sum_data <- read.csv("https://github.com/guillaumed83/shiny_juveniles_restigouche/blob/master/Summary_year_d_avg_FL_R.csv")
+sum_data <- read.csv("https://raw.githubusercontent.com/guillaumed83/shiny_juveniles_restigouche/master/Summary_year_d_avg_FL_R.csv")
 
 
 list_lf <- c("0+","1+","2+")
