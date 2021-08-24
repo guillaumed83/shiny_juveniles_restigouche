@@ -58,7 +58,7 @@ ui <- fluidPage(
              h2("Word of warning"),
              h4("This app is not intended as an analysis platform but rather a visualization tool that allows the quick exploration of the results generated in Dauphin et al. (2021). "),
              h4("The user can select a year of interest and plot two variables of their choice. on each plot, a dot correspond to one site, sub-watershed are color-coded as indicated in the legend, 
-                and the size of the dot is proportionate to the number of juvenile that had their FL measured."),
+                and the size of the dot is proportionate to the number of juvenile that had their fork length measured."),
              
              h4("In the Visualization tab, the plots are automatically generated with a linear model fitted to the selected data. This allow a quick look at the general trend however,
                 this is likely not the most appropriate way to analyse the data and therefore this should be kept in mind while exploring the dataset"),
