@@ -65,7 +65,7 @@ ui <- fluidPage(
              
              h2("Glossary"),
              h4("The visualization tab allows the user to plot different variable listed below:"),
-             h4(tags$b("JULIAN_DAY"), ": Calendar day of sampling/electrofishing"),
+             h4(tags$b("JULIAN_DAY"), ": Ordinal day of sampling/electrofishing"),
              h4(tags$b("d_0"), ": Average density of 0+ juveniles"),
              h4(tags$b("d_1"), ": Average density of 1+ juveniles"),
              h4(tags$b("d_2"), ": Average density of 2+ juveniles"),
@@ -176,12 +176,30 @@ server <- function(input, output, session) {
      if(input$age == "0+"){size_vector = "TOT_COUNT_0"}
      if(input$age == "1+"){size_vector = "TOT_COUNT_1"}
      if(input$age == "2+"){size_vector = "TOT_COUNT_2"}   
-    
+
+     if(input$x == "JULIAN_DAY"){ x_label = "Ordinal Day"}
+     if(input$y == "JULIAN_DAY"){ y_label = "Ordinal Day"}
+     if(input$x == "d_0"){ x_label = paste("Density of 0+ (fish/",expression(m^2),")",sep="")}
+     if(input$y == "d_0"){ y_label = paste("Density of 0+ (fish/",expression(m^2),")",sep="")}
+     if(input$x == "d_1"){ x_label = paste("Density of 1+ (fish/",expression(m^2),")",sep="")}
+     if(input$y == "d_1"){ y_label = paste("Density of 1+ (fish/",expression(m^2),")",sep="")}
+     if(input$x == "d_2"){ x_label = paste("Density of 2+ (fish/",expression(m^2),")",sep="")}
+     if(input$y == "d_2"){ y_label = paste("Density of 2+ (fish/",expression(m^2),")",sep="")}
+     if(grepl("AVG_LENGTH",input$x) == TRUE){ x_label = "Average fork length (mm)"}
+     if(grepl("AVG_LENGTH",input$y) == TRUE){ y_label = "Average fork length (mm)"}
+     
+     
+     
+     
+         
 #        
      ggplot(data = sum_data %>% filter(SURVEY==input$Year), aes_string(x = input$x, y = input$y,colour="Sub_catchment_index",size=size_vector)) +
        
        scale_x_continuous(limits = x_limits ) +
        scale_y_continuous(limits = c(-100,200) ) +
+       xlab(x_label)+
+       ylab(y_label)+
+       
        geom_point(shape=16)+
        scale_size_area(max_size = 25,
                        breaks = c(1, 10, 30, 100),
